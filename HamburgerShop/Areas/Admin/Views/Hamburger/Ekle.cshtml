@@ -1,0 +1,26 @@
+﻿@using HamburgerShop.ViewModels;
+@model HamburgerViewModel
+
+<div class="card-header; text-center;">
+    <h2 style="color:darkkhaki; text-align:center">ADMİN HAMBURGER EKLEME SAYFASI</h2>
+</div>
+
+<div class="card-body">
+    <form asp-area="Admin" asp-controller="Hamburger" asp-action="Ekle" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="HamburgerAdi">HAMBURGER ADI:</label>
+            <input asp-for="HamburgerAdi" type="text" class="form-control"/>
+            <span asp-validation-for="HamburgerAdi" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="HamburgerFiyati">HAMBURGER FİYATI:</label>
+            <input asp-for="HamburgerFiyati" type="number" class="form-control"/>
+            <span asp-validation-for="HamburgerFiyati" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="HamburgerResmi">HAMBURGER RESİMİ EKLEME:</label>
+            <input asp-for="HamburgerResmi" type="file" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">EKLE</button>
+    </form>
+</div>

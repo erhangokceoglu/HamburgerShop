@@ -1,0 +1,23 @@
+﻿@using HamburgerShop.Models.Data.Classes;
+@model EkstraMalzeme
+
+<div class="card-header; text-center;">
+    <h2 style="color:darkkhaki; text-align:center">ADMİN EKSTRA MALZEME EKLEME SAYFASI</h2>
+</div>
+
+<div class="card-body">
+    <form asp-area="Admin" asp-controller="EkstraMalzeme" asp-action="Ekle" method="post">
+        <div class="form-group">
+            <label asp-for="EkstraMalzemeAdi">EKSTRA MALZEME ADI:</label>
+            <input asp-for="EkstraMalzemeAdi" type="text" class="form-control" />
+            <span asp-validation-for="EkstraMalzemeAdi" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="EkstraMalzemeFiyati">EKSTRA MALZEME FİYATI:</label>
+            <input asp-for="EkstraMalzemeFiyati" type="number" class="form-control" />
+            <span asp-validation-for="EkstraMalzemeFiyati" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">EKLE</button>
+    </form>
+</div>
+

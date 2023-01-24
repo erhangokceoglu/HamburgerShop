@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger App</title>
+    <link rel="icon" href="~/images/s-4.png" type="image/x-icon">
+    <link href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <!-- header section starts  -->
+
+    <header>
+        <a asp-controller="Home" asp-action="Index" style="text-decoration:none" class="logo"><i class="fas fa-hamburger"></i>Hamburger Shop</a>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <a class="text-decoration-none" asp-action="Index" asp-controller="Siparis">Sipariş Ver</a>
+            <a class="text-decoration-none" asp-area="Admin" asp-action="Index" asp-controller="Dashboard">Admin</a>
+        </nav>
+    </header>
+
+    <!-- header section ends -->
+    <!-- renderbody section starts -->
+
+    <section class="home" id="home" style="font-size:24px; margin-top: 24px">
+        @RenderBody()
+    </section>
+
+    <!-- renderbody ends -->
+    <!-- footer section starts  -->
+
+    <footer>
+        <div id="layoutSidenav_content">
+
+            <section class="footer">
+
+                <div class="share">
+                    <a href="#" class="btn">facebook</a>
+                    <a href="#" class="btn">twitter</a>
+                    <a href="#" class="btn">instagram</a>
+                </div>
+
+                <h1 class="credit"> created by <span>Erhan Gökçeoğlu</span> | all rights reserved! </h1>
+
+            </section>
+        </div>
+    </footer>
+
+    <!-- footer section ends  -->
+    <!-- scroll top button  -->
+    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+    <!-- loader  -->
+    <div class="loader-container">
+        <img src="~/images/burger.gif" alt="">
+    </div>
+    <script src="~/js/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+

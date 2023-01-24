@@ -1,0 +1,22 @@
+﻿@using HamburgerShop.Models.Data.Classes;
+@model Boyut
+
+<div class="card-header; text-center;">
+    <h2 style="color:darkkhaki; text-align:center">ADMİN BOYUT EKLEME SAYFASI</h2>
+</div>
+
+<div class="card-body">
+    <form asp-area="Admin" asp-controller="Boyut" asp-action="Ekle" method="post">
+        <div class="form-group">
+            <label asp-for="BoyutAdi">BOYUT ADI:</label>
+            <input asp-for="BoyutAdi" type="text" class="form-control" />
+            <span asp-validation-for="BoyutAdi" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="BoyutFiyati">BOYUT FİYATI:</label>
+            <input asp-for="BoyutFiyati" type="number" class="form-control" />
+            <span asp-validation-for="BoyutFiyati" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">EKLE</button>
+    </form>
+</div>
